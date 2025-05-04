@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header class="header__bg">
+        <div class="container all__header">
+            <div class="logo">
+                <img src="./assets/img/logo.66810c3d.svg" alt="Logo">
+            </div>
+            <div class="darkLight__mode">
+                <i class="fa-solid fa-sun"></i>
+                <div class="form-check form-switch">
+                    <input onclick="darkMode()" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                </div>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="main__searchSection">
+            <input id="filter__title" type="text" placeholder="Filter by title, companies, expertise…">
+            <select name="" id="filter__country">
+                <option value="All">Filter by location…</option>
+                <option value="Germany">Germany</option>
+                <option value="Japan">Japan</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Russia">Russia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+            </select>
+            <div id="search__filter">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault"></label>
+                </div>
+                <h5>Full Time Only </h5>
+                <button onclick="show()" id="src">Search</button>
+            </div>
+        </div>
+        <div class="cards"></div>
+        <div class="text-center  pb-5">
+            <button id="btn__loadMore" onclick="loadMore()" class="btn btn-primary"> Load More</button>
+        </div>
+    </main>
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
