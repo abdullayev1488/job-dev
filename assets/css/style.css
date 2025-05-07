@@ -173,6 +173,23 @@ body.active {
 .card h3:last-child{
 color: #5964e0;}
 
+.imgBox {
+    width: 60px;
+    height: 60px;
+    background-color: #19202d;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+
+
 
 
 

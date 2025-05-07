@@ -142,6 +142,7 @@ const filterTitleEl = document.querySelector("#filter__title")
 const filterCountryEl = document.querySelector("#filter__country")
 const flexCheckDefaultEl = document.querySelector("#flexCheckDefault")
 const loadMoreBtn = document.querySelector("#btn__loadMore")
+const modalBodyEl = document.querySelector("#modal_body")
 
 
 let x = 9
@@ -154,7 +155,7 @@ function show() {
     .filter(item => filterCountryEl.value == "All" ? item : item.country == filterCountryEl.value)
     .filter(item => item.job.toLowerCase().startsWith(filterTitleEl.value.trim().toLowerCase()))
     .forEach(item => {
-      html += `   <div class="card">
+      html += `   <div onclick="modal(${item.id})" class="card"  data-bs-toggle="modal" data-bs-target="#centeredModal">
                         <img src="${item.img}" alt="">
                         <h3>
                          <span>${item.date}</span>
@@ -179,4 +180,21 @@ function loadMore() {
 
 function darkMode() {
   document.body.classList.toggle("active")
+}
+
+function modal(id) {
+  let modalFind = jobListings.find(item => item.id == id)
+  modalBodyEl.innerHTML = `           
+                            <div class="imgBox">
+                              <img src="${modalFind.img}" alt="">
+                            </div>            
+                              <h3>
+                              <span>${modalFind.date}</span>
+                              ●
+                              <span>${modalFind.time ? "Full Time" : "Part Time"}</span>
+                              </h3>
+                              <h2>${modalFind.job}</h2>
+                              <h3>${modalFind.company}</h3>
+                              <h3>${modalFind.country}</h3>`
+
 }

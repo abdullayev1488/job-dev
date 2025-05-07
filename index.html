@@ -23,7 +23,8 @@
             <div class="darkLight__mode">
                 <i class="fa-solid fa-sun"></i>
                 <div class="form-check form-switch">
-                    <input onclick="darkMode()" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <input onclick="darkMode()" class="form-check-input" type="checkbox" role="switch"
+                        id="flexSwitchCheckDefault">
                     <label class="form-check-label" for="flexSwitchCheckDefault"></label>
                 </div>
                 <i class="fa-solid fa-moon"></i>
@@ -31,6 +32,25 @@
         </div>
     </header>
     <main class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="centeredModal" tabindex="-1" aria-labelledby="centeredModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="centeredModalLabel">Ortalanmış Modal</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div id="modal_body" class="modal-body">
+                    xz
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+      </div>
+    </div>
+</div>
+<!-- Modal -->
+
         <div class="main__searchSection">
             <input id="filter__title" type="text" placeholder="Filter by title, companies, expertise…">
             <select name="" id="filter__country">
@@ -56,10 +76,11 @@
         <div class="text-center  pb-5">
             <button id="btn__loadMore" onclick="loadMore()" class="btn btn-primary"> Load More</button>
         </div>
+
     </main>
+    <footer></footer>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </body>
 
